@@ -65,7 +65,7 @@
    40))
 
 (eval-and-compile
-  (defvar combobulate-julia-definitions
+  (defconst combobulate-julia-definitions
     '((context-nodes
        '("identifier" "integer_literal" "float_literal"
          "string_literal" "character_literal" "boolean_literal"
@@ -161,6 +161,7 @@
       (procedures-edit nil)
       (procedures-sexp nil)
       (plausible-separators '("," "\n" ";"))
+      (procedure-discard-rules '("line_comment" "block_comment"))
       (procedures-defun
        '((:activation-nodes
           ((:nodes ("function_definition" "macro_definition"
